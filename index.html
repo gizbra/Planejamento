@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANEJAMENTO DE DESPESAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Planejamento Mensal de Despesas</h1>
+
+
+        <form id="expense-form">
+           <input type="text" id="name" placeholder="Descrição da Despesa" required />
+           <input type="number" id="amount" 
+        placeholder="Valor (R$)" required />
+            <input type="date" id="date" required />
+            <select id="category" required>
+                <option value="">Categoria</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Contas">Contas</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="summary">
+            <h2>Resumo</h2>
+            <p>Total Gastos: R$ <span id="total">R$ 0.00</span></p>
+            </div>
+
+        <div class="expense-list">
+            <h2>Lista de Despesas</h2>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor (R$)</th>
+                        <th>Data</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="expenses-table"> 
+                    <!-- As despesas serão adicionadas aqui dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
